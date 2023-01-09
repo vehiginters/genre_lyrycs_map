@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 from os import path
 import sys
+GENRE = "Q484641"
 
 def read_lyrics(genre_id):
 	file_name = "{}.txt".format(genre_id)
@@ -10,7 +11,7 @@ def read_lyrics(genre_id):
 		return f.read()
 
 if __name__ == "__main__":
-	lyrics = read_lyrics("Q38848")
+	lyrics = read_lyrics(GENRE)
 	if not lyrics:
 		print("No lyrics found")
 		sys.exit()
